@@ -1,0 +1,245 @@
+<script setup>
+import Breadcrum from '@/Components/Breadcrum.vue';
+import DropdownHeadingOne from '@/Components/DropdownHeading/DropdownHeadingOne.vue';
+import Layout from '@/Layouts/Layout.vue';
+import { ref } from 'vue';
+const downloadLink = '/curriculum/bscs.pdf';
+const latestRevision = '2024';
+const lastUpdated = 'May 2, 2026';
+
+const curriculumDescription = 'A comprehensive curriculum designed to build strong foundational skills in computer science, computational thinking, programming, and systems design.';
+const specializationPoints = [
+  'Software Engineering and Application Development',
+  'Data Science and Artificial Intelligence',
+  'Network Systems and Cybersecurity',
+  'Multimedia and Game Development',
+];
+
+const curriculumYears = [
+  {
+    year: 'Year 1',
+    semesters: [
+      {
+        name: 'First Semester',
+        courses: [
+          { code: 'CS101', units: 3, title: 'Introduction to Computing', description: 'Fundamentals of computers, programming logic, and problem solving.' },
+          { code: 'MATH101', units: 3, title: 'College Algebra', description: 'Algebraic techniques used in science and engineering.' },
+        ],
+      },
+      {
+        name: 'Summer',
+        courses: [
+          { code: 'ENG101', units: 3, title: 'English Communication', description: 'Writing, speaking, and reading for academic success.' },
+        ],
+      },
+      {
+        name: 'Second Semester',
+        courses: [
+          { code: 'CS102', units: 4, title: 'Programming Fundamentals', description: 'Introduction to programming using structured design techniques.' },
+          { code: 'MATH102', units: 3, title: 'Trigonometry', description: 'Trigonometric functions and applications.' },
+        ],
+      },
+    ],
+    electives: [
+      { code: 'ITE101', units: 3, title: 'Web Development Basics', description: 'Introduction to HTML, CSS, and basic web design concepts.' },
+      { code: 'CS105', units: 3, title: 'Introduction to Robotics', description: 'Fundamentals of robotics and basic automation systems.' },
+    ],
+  },
+  {
+    year: 'Year 2',
+    semesters: [
+      {
+        name: 'First Semester',
+        courses: [
+          { code: 'CS201', units: 3, title: 'Data Structures', description: 'Organizing and manipulating data using standard structures.' },
+          { code: 'CS202', units: 3, title: 'Discrete Mathematics', description: 'Mathematics for computer science and logical reasoning.' },
+        ],
+      },
+      {
+        name: 'Summer',
+        courses: [
+          { code: 'PSY101', units: 3, title: 'Psychology', description: 'Understanding human behavior and interaction in technology.' },
+        ],
+      },
+      {
+        name: 'Second Semester',
+        courses: [
+          { code: 'CS203', units: 4, title: 'Object-Oriented Programming', description: 'Principles of OOP and application development.' },
+          { code: 'STAT101', units: 3, title: 'Statistics', description: 'Statistical methods for data analysis.' },
+        ],
+      },
+    ],
+    electives: [
+      { code: 'CS210', units: 3, title: 'Mobile App Development', description: 'Building mobile applications for Android and iOS platforms.' },
+      { code: 'CS215', units: 3, title: 'Database Systems', description: 'Introduction to relational databases and SQL.' },
+    ],
+  },
+  {
+    year: 'Year 3',
+    semesters: [
+      {
+        name: 'First Semester',
+        courses: [
+          { code: 'CS301', units: 3, title: 'Algorithms', description: 'Design and analysis of algorithms for efficiency and correctness.' },
+          { code: 'CS302', units: 3, title: 'Computer Organization', description: 'Internal structure and operation of computer systems.' },
+        ],
+      },
+      {
+        name: 'Summer',
+        courses: [
+          { code: 'COMM101', units: 3, title: 'Professional Communication', description: 'Communication skills for professional and technical contexts.' },
+        ],
+      },
+      {
+        name: 'Second Semester',
+        courses: [
+          { code: 'CS303', units: 4, title: 'Software Engineering', description: 'Software development lifecycle, requirements, and quality assurance.' },
+          { code: 'CS304', units: 3, title: 'Operating Systems', description: 'Design and management of modern operating systems.' },
+        ],
+      },
+    ],
+    electives: [
+      { code: 'CS320', units: 3, title: 'Artificial Intelligence', description: 'Basic AI concepts and problem-solving techniques.' },
+      { code: 'CS325', units: 3, title: 'Network Security', description: 'Security principles for networked systems.' },
+    ],
+  },
+  {
+    year: 'Year 4',
+    semesters: [
+      {
+        name: 'First Semester',
+        courses: [
+          { code: 'CS401', units: 3, title: 'Capstone Project I', description: 'Project planning, research, and proposal development.' },
+          { code: 'CS402', units: 3, title: 'Computer Networks', description: 'Network protocols, architecture, and communication systems.' },
+        ],
+      },
+      {
+        name: 'Summer',
+        courses: [
+          { code: 'ETH101', units: 3, title: 'Ethics in Computing', description: 'Ethical issues and professional responsibility in technology.' },
+        ],
+      },
+      {
+        name: 'Second Semester',
+        courses: [
+          { code: 'CS403', units: 4, title: 'Capstone Project II', description: 'Final project implementation, testing, and presentation.' },
+          { code: 'CS404', units: 3, title: 'Emerging Technologies', description: 'Study of current trends in technology and innovation.' },
+        ],
+      },
+    ],
+    electives: [
+      { code: 'CS430', units: 3, title: 'Cloud Computing', description: 'Fundamentals of cloud services and deployment models.' },
+      { code: 'CS435', units: 3, title: 'Human-Computer Interaction', description: 'Designing user-centered interfaces and experiences.' },
+    ],
+  },
+];
+
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString('en-US', options);
+};
+</script>
+
+<template>
+    <Layout>
+
+        <DropdownHeadingOne group="Academics" title="Bachelor in Library and Information Science" class="mb-8" />
+
+        <section class="container mx-auto px-4 py-8">
+            
+            <!-- Bread Crumb -->
+            <Breadcrum :path="{data: {path_name: 'Academics', label: 'BLIS'}}"/>
+
+            <div class="grid gap-6 ">
+                <div class="space-y-6">
+                    <div class=" border-gray-200">
+                        <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Latest Revision</p>
+                        <p class="text-3xl font-semibold text-black mt-2">Year {{ latestRevision }}</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white/90 p-6 border border-gray-200">
+                        <h2 class="text-2xl font-semibold mb-4">Curriculum Design Principle</h2>
+                        <p class="text-gray-700 leading-relaxed">{{ curriculumDescription }}</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white/90 p-6 border border-gray-200">
+                        <h2 class="text-2xl font-semibold mb-4">Specialization</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li v-for="special in specializationPoints" :key="special">{{ special }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between">
+                <div>
+                    <div class="text-4xl font-bold mb-2">Curriculum</div>
+                    <p class="text-sm text-gray-500">Last updated: {{ lastUpdated }}</p>
+                </div>
+                <a :href="downloadLink" class="px-4 py-2 bg-red-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">Download</a>
+
+            </div>
+
+            <div class="mt-4 space-y-12">
+                <div v-for="year in curriculumYears" :key="year.year" class="rounded-3xl bg-white p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-2xl font-semibold mb-4">{{ year.year }}</h3>
+
+                    <div v-for="group in year.semesters" :key="group.name" class="space-y-4 mb-8">
+                        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-600">{{ group.name }}</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-left border-separate border-spacing-y-3">
+                                <thead>
+                                    <tr class="bg-slate-100 text-sm uppercase text-slate-600">
+                                        <th class="px-4 py-3">Code</th>
+                                        <th class="px-4 py-3">Title</th>
+                                        <th class="px-4 py-3">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="course in group.courses" :key="course.code" class="bg-white odd:bg-slate-50">
+                                        <td class="px-4 py-4 align-top">
+                                            <div class="font-semibold text-slate-800">{{ course.code }}</div>
+                                            <div class="text-xs text-slate-500">{{ course.units }} units</div>
+                                        </td>
+                                        <td class="px-4 py-4 text-slate-800">{{ course.title }}</td>
+                                        <td class="px-4 py-4 text-slate-600">{{ course.description }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <details class="group rounded-3xl border border-slate-200 bg-slate-50">
+                        <summary class="flex cursor-pointer items-center justify-between px-5 py-4 text-lg font-semibold text-slate-800 transition-colors duration-200 hover:bg-slate-100">
+                            Elective Courses
+                            <span class="transition-transform duration-200 group-open:rotate-180">⌄</span>
+                        </summary>
+                        <div class="px-5 pb-5 pt-2">
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full text-left">
+                                    <thead>
+                                        <tr class="border-b border-slate-200 bg-white text-sm uppercase text-slate-600">
+                                            <th class="px-4 py-3">Code</th>
+                                            <th class="px-4 py-3">Title</th>
+                                            <th class="px-4 py-3">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="elective in year.electives" :key="elective.code" class="border-b border-slate-200 last:border-b-0 bg-slate-50">
+                                            <td class="px-4 py-3 text-sm font-semibold text-slate-800">
+                                                {{ elective.code }}
+                                                <div class="text-xs text-slate-500">{{ elective.units }} units</div>
+                                            </td>
+                                            <td class="px-4 py-3 text-sm text-slate-800">{{ elective.title }}</td>
+                                            <td class="px-4 py-3 text-sm text-slate-600">{{ elective.description }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </Layout>
+</template>
