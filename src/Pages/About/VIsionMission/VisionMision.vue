@@ -16,7 +16,7 @@ import Layout from '@/Layouts/Layout.vue';
         <section class="container mx-auto px-5 py-5">
             <div class="grid gap-8 lg:grid-cols-2 items-center">
                 <div class="flex justify-center items-center p-10">
-                    <img src="/src/Images/ics.png" alt="ICS Logo" class="h-80 w-80 object-cover">
+                    <img src="/Images/ics.png" alt="ICS Logo" class="h-80 w-80 object-cover">
                 </div>
                 <div class="text-center flex justify-center items-center flex-col">
                     <div class="py-2 px-5">

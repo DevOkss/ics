@@ -7,15 +7,15 @@ import { RouterLink } from 'vue-router';
 const images = ref([
     {
         id: 'slide1',
-        src: '/src/Images/Carousel/topcit.jpg',
+        src: '/Images/Carousel/topcit.jpg',
     },
     {
         id: 'slide2',
-        src: '/src/Images/Carousel/research.jpg',
+        src: '/Images/Carousel/research.jpg',
     },
     {
         id: 'slide3',
-        src: '/src/Images/Carousel/pitch.jpg',
+        src: '/Images/Carousel/pitch.jpg',
     },
 ]);
 

@@ -119,7 +119,7 @@ const socialLinks = [
               class="w-20 h-20 rounded-full ring ring-white/25 ring-offset-0 flex items-center justify-center text-xl font-extrabold text-white"
               style="background-color: rgba(255,255,255,0.12);"
             >
-              <img src="/src/Images/ics.png" alt="ICS">
+              <img src="/Images/ics.png" alt="ICS">
             </div>
           </div>
           <div class="text-center text-white/55 text-xs leading-relaxed">
@@ -132,7 +132,7 @@ const socialLinks = [
               class="w-20 h-20 rounded-full ring ring-white/20 ring-offset-0 flex items-center justify-center"
               style="background-color: rgba(255,255,255,0.08);"
             >
-              <img src="/src/Images/tcgc.jpg" alt="TCGC">
+              <img src="/Images/tcgc.jpg" alt="TCGC">
             </div>
           </div>
         </div>

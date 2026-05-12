@@ -25,7 +25,7 @@ defineProps({
             <div class="absolute inset-x-0 bottom-0 flex justify-center">
                 <div class="relative -bottom-16">
                     <div class="w-32 h-32 rounded-full border-4 border-white bg-white overflow-hidden shadow-lg">
-                        <img src="/src/Images/ics.png" :alt="name" class="w-full h-full object-cover" />
+                        <img src="/Images/ics.png" :alt="name" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>

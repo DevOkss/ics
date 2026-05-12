@@ -19,13 +19,13 @@ const route = useRoute();
           <!-- Logo 1: ICS Initials -->
           <div class="avatar placeholder">
             <div class="w-11 rounded-full bg-white text-maroon ring ring-white/30 ring-offset-0">
-              <img src="/src/Images/tcgc.jpg" alt="TCGC">
+              <img src="/Images/tcgc.jpg" alt="TCGC">
             </div>
           </div>
           <!-- Logo 2: Computer Icon -->
           <div class="avatar placeholder">
             <div class="w-11 rounded-full bg-white/15 ring ring-white/30 ring-offset-0 ">
-              <img src="/src/Images/ics.png" alt="ICS">
+              <img src="/Images/ics.png" alt="ICS">
             </div>
           </div>
           <!-- Title -->
