@@ -4,73 +4,85 @@ import Breadcrum from '@/Components/Breadcrum.vue';
 import DropdownHeadingOne from '@/Components/DropdownHeading/DropdownHeadingOne.vue';
 import Profile from '@/Components/Profile.vue';
 import Layout from '@/Layouts/Layout.vue';
+import Carin from '@/Images/faculty/full-time/carin.png';
+import Jam from '@/Images/faculty/full-time/jam.png';
+import Cabido from '@/Images/faculty/full-time/cabido.png';
+import Janziel from '@/Images/faculty/full-time/janziel.png';
+import Erwin from '@/Images/faculty/full-time/erwin.png';
+import Tia from '@/Images/faculty/full-time/tia.png';
+import Danica from '@/Images/faculty/full-time/danica.png';
+import Arthur from '@/Images/faculty/full-time/arthur.png';
+import Okss from '@/Images/faculty/full-time/okss.png';
+import Rhaiza from '@/Images/faculty/full-time/rhaiza.png';
+import Jessel from '@/Images/faculty/full-time/jessel.png';
+
 
 const fulltimeFaculty = [
     {
         name: 'Carin Z. Cabatingan, MST-CS',
         position: 'Dean',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/carin.png',
+        imageUrl: Carin,
     },
     {
         name: 'Jamaica N. Abing',
         position: 'Executive Assistant',
         course_taught: 'Administrative Support',
-        imageUrl: '/Images/faculty/full-time/jam.png',
+        imageUrl: Jam,
     },
     {
         name: 'Manuel C. Cabido, MSCS',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/cabido.png',
+        imageUrl: Cabido,
     },
     {
         name: 'Janziel B. Selatona, MSIT (CAR)',
         position: 'Program Head',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/janziel.png',
+        imageUrl: Janziel,
     },
     {
         name: 'Erwin E. Lacpao, ECE',
         position: 'Full-Time Instructor',
         course_taught: 'General Education and Professional Courses',
-        imageUrl: '/Images/faculty/full-time/erwin.png',
+        imageUrl: Erwin,
     },
     {
         name: 'Jenieffer T. Tia, MBA, MM-ITM',
         position: 'Full-Time Instructor',
         course_taught: 'General Education and Professional Courses',
-        imageUrl: '/Images/faculty/full-time/tia.png',
+        imageUrl: Tia,
     },
     {
         name: 'Danica Ave R. Magbanua',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/danica.png',
+        imageUrl: Danica,
     },
     {
         name: 'Arthur C. Tagalog',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/arthur.png',
+        imageUrl: Arthur,
     },
     {
         name: 'Christopher Casipong',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/okss.png',
+        imageUrl: Okss,
     },
     {
         name: 'Maria Rhaiza Buenafe',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/rhaiza.png',
+        imageUrl: Rhaiza,
     },
     {
         name: 'Jessel L. Zapanta',
         position: 'Full-Time Instructor',
         course_taught: 'Professional Courses',
-        imageUrl: '/Images/faculty/full-time/jessel.png',
+        imageUrl: Jessel,
     },
     // Add more faculty members here
 ];
