@@ -7,7 +7,7 @@ import Layout from '@/Layouts/Layout.vue';
 <template>
     <Layout>
         
-        <DropdownHeadingTwo group="About" title="Contact Us" description="Whether you have questions about our programs, need assistance, or want to connect with our team, we're here to help. Fill out the form below or use the contact information provided to get in touch." />
+        <DropdownHeadingTwo group="About" title="Contact Us" description="" />
 
        <div class="mt-2 px-5">
             <Breadcrum :path="{data: {path_name: 'About', label: 'Contact Us'}}" class="mt-5"/>
@@ -33,11 +33,11 @@ import Layout from '@/Layouts/Layout.vue';
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold text-slate-900 dark:text-white">Phone</p>
-                                    <p class="dark:text-white">+63 9683022435</p>
+                                    <p class="dark:text-white">(+63) 929 262 7522</p>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-slate-900 dark:text-white">Email</p>
-                                    <p class="dark:text-white">ics@gadtc.edu.ph</p>
+                                    <p class="dark:text-white">instituteofcomputerstudies@gmail.com</p>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-slate-900 dark:text-white">Office Hours</p>

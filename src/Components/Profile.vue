@@ -8,7 +8,7 @@ defineProps({
         type: String,
         required: true
     },
-    expertise: {
+    course_taught: {
         type: String,
         required: true
     },
@@ -20,21 +20,17 @@ defineProps({
 </script>
 
 <template>
-    <div class="max-w-xs bg-white shadow-xl rounded-lg mt-10 mb-10 sm:mb-2">
-        <div class="relative mb-4">
-            <div class="absolute inset-x-0 bottom-0 flex justify-center">
-                <div class="relative -bottom-16">
-                    <div class="w-32 h-32 rounded-full border-4 border-white bg-white overflow-hidden shadow-lg">
-                        <img src="/Images/ics.png" :alt="name" class="w-full h-full object-cover" />
-                    </div>
-                </div>
+    <div class="w-full max-w-sm bg-white shadow-lg rounded-lg overflow-hidden mx-auto">
+        <div class="flex justify-center pt-6">
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-gray-200 overflow-hidden">
+                <img :src="imageUrl" :alt="name" class="w-full h-full object-cover object-center rounded-full" />
             </div>
         </div>
-        <div class="px-6 pt-16 pb-8 text-center">
-            <h2 class="text-2xl font-semibold text-slate-900">{{ name }}</h2>
-            <p class="mt-2 text-sm text-slate-500">{{ position }}</p>
-            <div class="mt-6 rounded-3xl bg-slate-50 p-4 text-center">
-                <p class="mt-2 text-slate-600">{{ expertise }}</p>
+        <div class="px-6 py-4 text-center">
+            <h2 class="text-xl font-semibold text-slate-900">{{ name }}</h2>
+            <p class="text-sm text-slate-600 mt-1">{{ position }}</p>
+            <div class="mt-4 bg-slate-50 rounded-lg p-3">
+                <p class="text-sm text-slate-700">{{ course_taught }}</p>
             </div>
         </div>
     </div>

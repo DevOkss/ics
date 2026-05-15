@@ -19,7 +19,7 @@ import Layout from '@/Layouts/Layout.vue';
                     <img src="/Images/ics.png" alt="ICS Logo" class="h-80 w-80 object-cover">
                 </div>
                 <div class="text-center flex justify-center items-center flex-col">
-                    <div class="py-2 px-5">
+                    <div class="py-2 px-5" data-aos="slide-left" data-aos-duration="1000">
                         <h2 class="text-5xl font-bold text-slate-900 mb-4 uppercase">Vision</h2>
                         <p class="text-slate-600 leading-relaxed mb-6 text-xl">
                             The Institute of Computer Studies is a service-oriented Institute committed in providing
@@ -27,7 +27,7 @@ import Layout from '@/Layouts/Layout.vue';
                             computer professionals instrumental to unending demands towards community development and
                             nation-building.</p>
                     </div>
-                    <div class="py-2 px-5">
+                    <div class="py-2 px-5" data-aos="slide-left" data-aos-duration="1000">
                         <h2 class="text-5xl font-bold text-slate-900 mb-4 uppercase">Mission</h2>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             The institute of computer studies shall:
@@ -36,7 +36,7 @@ import Layout from '@/Layouts/Layout.vue';
                             to the development of the local and global community they may serve.
                         </p>
                     </div>
-                    <div class="py-2 px-5">
+                    <div class="py-2 px-5" data-aos="slide-left" data-aos-duration="1000">
                         <h2 class="text-5xl font-bold text-slate-900 mb-4 uppercase">Goals and Objectives</h2>
                         <p class="text-slate-600 leading-relaxed mb-6 text-left">
                             1. Inculcate love of God country, the local and global community;

@@ -48,18 +48,22 @@ const closePublication = () => {
 <template>
   <Layout>
 
-    <DropdownHeadingTwo group="Bulletin" title="Research Publications" description="Explore recent research from our faculty and students, complete with abstracts and access links." />
+    <DropdownHeadingTwo group="Bulletin" title="Research Publications"
+      description="Explore recent research from our faculty and students, complete with abstracts and access links." />
 
-     <div class="mt-2 px-5">
-            <Breadcrum :path="{data: {path_name: 'Alumni', label: 'Research Publications'}}" class="mt-5"/>
-       </div>
-       
+    <div class="mt-2 px-5">
+      <Breadcrum :path="{ data: { path_name: 'Alumni', label: 'Research Publications' } }" class="mt-5" />
+    </div>
+
     <section class="container mx-auto px-5 py-5">
       <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        <article v-for="publication in publications" :key="publication.id" class="rounded-4xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+        <article v-for="publication in publications" :key="publication.id"
+          class="rounded-4xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg" v-if="1 == 0">
           <div class="p-6 flex h-full flex-col gap-4">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-500">Published {{ new Date(publication.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}</p>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-500">Published {{ new
+                Date(publication.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                }}</p>
               <h2 class="mt-3 text-2xl font-semibold text-slate-900">{{ publication.title }}</h2>
             </div>
             <div class="text-slate-600">
@@ -71,6 +75,10 @@ const closePublication = () => {
             </div>
           </div>
         </article>
+
+        <div class="text-center col-span-full py-5">
+          <p class="text-xl text-slate-600">No research publications available at the moment.</p>
+        </div>
       </div>
     </section>
 
@@ -78,7 +86,10 @@ const closePublication = () => {
       <div class="modal-box max-w-3xl">
         <button class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4" @click="closePublication">✕</button>
         <div v-if="selectedPublication">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-500">{{ new Date(selectedPublication.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}</p>
+          <p class="text-sm uppercase tracking-[0.2em] text-slate-500">{{ new
+            Date(selectedPublication.date).toLocaleDateString('en-US', {
+              month: 'long', day: 'numeric', year: 'numeric'
+            }) }}</p>
           <h3 class="text-3xl font-semibold text-slate-900 mt-2">{{ selectedPublication.title }}</h3>
           <p class="mt-3 text-sm text-slate-500">Author: {{ selectedPublication.author }}</p>
           <div class="mt-6 space-y-4 text-slate-700">
@@ -88,7 +99,8 @@ const closePublication = () => {
             </div>
             <div>
               <p class="font-semibold">Access Link</p>
-              <a :href="selectedPublication.access" target="_blank" rel="noreferrer" class="text-blue-600 hover:text-blue-800 break-words">{{ selectedPublication.access }}</a>
+              <a :href="selectedPublication.access" target="_blank" rel="noreferrer"
+                class="text-blue-600 hover:text-blue-800 break-words">{{ selectedPublication.access }}</a>
             </div>
           </div>
         </div>
