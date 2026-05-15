@@ -3,7 +3,7 @@ import Breadcrum from '@/Components/Breadcrum.vue';
 import DropdownHeadingOne from '@/Components/DropdownHeading/DropdownHeadingOne.vue';
 import Layout from '@/Layouts/Layout.vue';
 import { ref } from 'vue';
-const downloadLink = '/public/curriculum/bscs-curriculum.pdf';
+const downloadLink = '/curriculum/bscs-curriculum.pdf';
 const latestRevision = '2023';
 const lastUpdated = 'May 2, 2023';
 

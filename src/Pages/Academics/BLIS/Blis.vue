@@ -3,7 +3,7 @@ import Breadcrum from '@/Components/Breadcrum.vue';
 import DropdownHeadingOne from '@/Components/DropdownHeading/DropdownHeadingOne.vue';
 import Layout from '@/Layouts/Layout.vue';
 
-const downloadLink = '/public/curriculum/blis-curriculum.pdf';
+const downloadLink = '/curriculum/blis-curriculum.pdf';
 const latestRevision = '2026';
 const lastUpdated = 'May 15, 2026';
 

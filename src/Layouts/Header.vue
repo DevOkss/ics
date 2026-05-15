@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
 import { useRoute } from 'vue-router';
+import ICS from '@/Images/ics.png';
+import TCGC from '@/Images/tcgc.jpg';
 
 const mobileOpen = ref(false);
 const route = useRoute();
@@ -19,13 +21,13 @@ const route = useRoute();
           <!-- Logo 1: ICS Initials -->
           <div class="avatar placeholder">
             <div class="w-11 rounded-full bg-white text-maroon ring ring-white/30 ring-offset-0">
-              <img src="/Images/tcgc.jpg" alt="TCGC">
+              <img :src="TCGC" alt="TCGC">
             </div>
           </div>
           <!-- Logo 2: Computer Icon -->
           <div class="avatar placeholder">
             <div class="w-11 rounded-full bg-white/15 ring ring-white/30 ring-offset-0 ">
-              <img src="/Images/ics.png" alt="ICS">
+              <img :src="ICS" alt="ICS">
             </div>
           </div>
           <!-- Title -->

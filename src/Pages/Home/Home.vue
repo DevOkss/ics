@@ -3,19 +3,22 @@ import Layout from '@/Layouts/Layout.vue';
 import News from './News/News.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
 import { RouterLink } from 'vue-router';
+import Topcit from '@/Images/Carousel/topcit.jpg';
+import Research from '@/Images/Carousel/research.jpg';
+import Pitch from '@/Images/Carousel/pitch.jpg';
 
 const images = ref([
     {
         id: 'slide1',
-        src: '/Images/Carousel/topcit.jpg',
+        src: Topcit,
     },
     {
         id: 'slide2',
-        src: '/Images/Carousel/research.jpg',
+        src: Research,
     },
     {
         id: 'slide3',
-        src: '/Images/Carousel/pitch.jpg',
+        src: Pitch,
     },
 ]);
 
@@ -49,7 +52,7 @@ onUnmounted(() => {
                     <div v-for="(image, index) in images" :key="image.id"
                         class="absolute inset-0 transition-transform duration-700 ease-in-out"
                         :style="{ transform: `translateX(${(index - current) * 100}%)` }">
-                        <img :src="image.src" class="w-full h-full object-cover" :alt="`ICS Campus ${index + 1}`" />
+                        <img :src="image.src" class="w-full h-full object-cover" :alt="`ICS Campus ${index + 1}`" loading="eager" />
                     </div>
                 </div>
 
